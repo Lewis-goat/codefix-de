@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Breville/Sage Oracle – Dampffehler und ER-Codes richtig einordnen</title>
+<meta name="description" content="Dampf- und ER-Codes der Breville/Sage Oracle – welche Spülroutine zuerst hilft, wann Kalk die eigentliche Ursache ist und was die Teile kosten.">
+<link rel="canonical" href="https://de.codefixcoffee.com/blog/breville-oracle-steam-guide/">
+<link rel="alternate" hreflang="en" href="https://blog.codefixcoffee.com/post/breville-oracle-steam-guide/" />
+  <link rel="alternate" hreflang="fr" href="https://fr.codefixcoffee.com/blog/breville-oracle-steam-guide/" />
+  <link rel="alternate" hreflang="de" href="https://de.codefixcoffee.com/blog/breville-oracle-steam-guide/" />
+  <link rel="alternate" hreflang="es" href="https://es.codefixcoffee.com/blog/breville-oracle-steam-guide/" />
+  <link rel="alternate" hreflang="it" href="https://it.codefixcoffee.com/blog/breville-oracle-steam-guide/" />
+  <link rel="alternate" hreflang="pl" href="https://pl.codefixcoffee.com/blog/breville-oracle-steam-guide/" />
+  <link rel="alternate" hreflang="nl" href="https://nl.codefixcoffee.com/blog/breville-oracle-steam-guide/" />
+  <link rel="alternate" hreflang="pt" href="https://pt.codefixcoffee.com/blog/breville-oracle-steam-guide/" />
+  <link rel="alternate" hreflang="hu" href="https://hu.codefixcoffee.com/blog/breville-oracle-steam-guide/" />
+  <link rel="alternate" hreflang="cs" href="https://cs.codefixcoffee.com/blog/breville-oracle-steam-guide/" />
+  <link rel="alternate" hreflang="ro" href="https://ro.codefixcoffee.com/blog/breville-oracle-steam-guide/" />
+  <link rel="alternate" hreflang="sv" href="https://sv.codefixcoffee.com/blog/breville-oracle-steam-guide/" />
+  <link rel="alternate" hreflang="tr" href="https://tr.codefixcoffee.com/blog/breville-oracle-steam-guide/" />
+<link rel="stylesheet" href="/blog/blog.css">
+<link rel="alternate" type="application/rss+xml" title="CodeFix Blog" href="/blog/rss.xml">
+<meta name="google-adsense-account" content="ca-pub-9660119725457689"><script>(function(){var u="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9660119725457689";var d=false;function l(){if(d)return;d=true;var s=document.createElement("script");s.async=true;s.crossOrigin="anonymous";s.src=u;document.head.appendChild(s)}["scroll","pointerdown","keydown","touchstart"].forEach(function(e){addEventListener(e,l,{once:true,passive:true})});addEventListener("load",function(){setTimeout(l,3500)})})();</script></head>
+<body>
+<header class="site"><div class="in"><a class="brand" href="/blog/">☕ CodeFix Blog</a><span><a href="/">Zurück zur Website</a></span></div></header>
+<main>
+<h1>Breville/Sage Oracle – Dampffehler und ER-Codes richtig einordnen</h1>
+<p class="meta">2026-10-22</p>
+<p>Kein Bereich einer Breville Oracle arbeitet härter als die Dampfseite: ein Dampfkessel aus Edelstahl, ein Stab, der Milch automatisch texturiert, Füllstandsonden und eine Nachfüllpumpe, alle täglich auf Temperatur. Dort entsteht auch ein großer Teil der Fehlercodes. Die Oracle-Familie nutzt eine Servicetabelle mit 32 Einträgen, die Breville nicht veröffentlicht; im Vereinigten Königreich trägt dieselbe Hardware das <strong>Sage</strong>-Logo, und die Codes sind identisch. Bevor Sie auf ein defektes Teil schließen, arbeiten Sie die günstigen Prüfungen ab: Die meisten Abschaltungen auf der Dampfseite sind eine verstopfte Dampfdüse, eine unterlassene Spülung oder Kalk auf einer Sonde. Die <a href="https://de.codefixcoffee.com/breville/">Übersicht der Breville- und Sage-Modelle</a> hilft bei der Einordnung.</p>
+<h2>Wo die Dampf-Codes in der Oracle-Tabelle liegen</h2>
+<p>Oracle (BES980) und Oracle Touch (BES990) teilen sich eine Tabelle; die BES980 zeigt die Einträge als „Error 1" bis „Error 32", die BES990 stellt ein ER davor. Die dampfseitigen Einträge sammeln sich an fünf Stellen:</p>
+<ul>
+<li><strong>Error 1 bis 4</strong> – den Temperatursensor des Dampfkessels, durchlaufend als offener Stromkreis beim Start, Verlust im Betrieb und Kurzschluss in beiden Situationen. Ein Sensor, vier Meldewege.</li>
+<li><strong>Error 13 bis 16</strong> – dasselbe Quartett für den Temperatursensor des Dampfstabs, jene Sonde, die das Auto-Texturieren bei der richtigen Milchtemperatur stoppt. Sie sitzt am nassesten Ort der Maschine.</li>
+<li><strong>Error 18</strong> – der Dampfkessel heizt nicht ordnungsgemäß auf.</li>
+<li><strong>Error 20 und 21</strong> – Wasserstand des Dampfkessels oder Probleme der Nachfüllpumpe sowie eine Füllstandsmessung, die nicht zum erwarteten Bild der Platine passt.</li>
+<li><strong>Error 26</strong> – der Dampfkessel wurde über die Zieltemperatur hinaus heiß; <strong>Error 32</strong> – ein Dampfkessel-Leck oder ein gescheitertes Nachfüllen.</li>
+</ul>
+<p>Nicht alles in Stabnähe gehört zur Dampfseite: Die Codes 5 bis 8 zählen zum Temperatursensor des Kaffeekessels, <a href="https://de.codefixcoffee.com/breville/oracle-bes980/error-8/">Error 8</a> ist dessen Eintrag für den Kurzschluss im Betrieb. Das gespeicherte Protokoll hilft, die Familien zu trennen – an der BES980 öffnen Sie bei ausgeschalteter Maschine mit den gemeinsam gehaltenen Tasten 1 TASSE, 2 TASSEN und POWER den Error Storage und blättern durch alle 32 Codes samt Zählerständen.</p>
+<h2>Die erste Prüfung – die Spülroutine</h2>
+<p>Schwacher oder stotternder Dampf oder ein Code unmittelbar nach einem Milchgetränk verweist eher auf die Düse als auf den Kessel:</p>
+<ol>
+<li>Ziehen Sie den Netzstecker und lassen Sie den Dampfstab abkühlen.</li>
+<li>Schrauben Sie die Dampfdüse ab und weichen Sie sie in heißem Wasser mit einem Schuss Entkalker ein; befreien Sie jede Öffnung mit der Nadel des Reinigungswerkzeugs.</li>
+<li>Führen Sie die Dampfspülung durch – rund zehn Sekunden Dampf in die Tropfschale ohne aufgeschraubte Düse, danach noch einmal mit.</li>
+<li>Spülen Sie den Stab künftig nach jeder Milchrunde aus; getrocknete Milch in der Düse ist der Auslöser der meisten dieser Abschaltungen.</li>
+</ol>
+<p>Überwacht die Maschine den Dampfdruck – wie die Oracle Jet mit ihrem Code E16 –, kann eine verkrustete Düse den Fehler werfen, bevor Sie den nachlassenden Dampf überhaupt bemerken.</p>
+<h2>Härtegrad, Kalk und die Füllstandsonden</h2>
+<p>Wo das Wasser hart ist, schreibt der Kalk eigene Fehlercodes. Die Füllstandsonden des Dampfkessels sitzen ständig in heißem Wasser, und eine Kalkschicht isoliert sie so weit, dass die Platine „kein Wasser" liest, obwohl der Kessel voll ist – der klassische Weg zu Error 20 oder 21 und zum Nachfüllversagen von Error 32. Kalk lagert sich auch im Dampfweg und am Eingang der Nachfüllpumpe ab. Eine vollständige Entkalkung einschließlich des Dampfkessel-Zyklus ist die günstigste Diagnose, die Sie fahren können, und sie beseitigt erstaunlich viele dieser Codes im Alleingang.</p>
+<p>Das Schwestermodell der Reihe bestätigt den Punkt: Die Dual Boiler versteckt ihre Codes 00 bis 12 in einem Selbsttest-Menü, und <a href="https://de.codefixcoffee.com/breville/dual-boiler-bes920/00/">Code 00</a> – der Dampfkessel-Sensor wird nicht erkannt – steht dort an der Spitze einer Tabelle, deren Füllstands- und Nachfüll-Einträge unter hartem Wasser exakt dasselbe Verhalten zeigen.</p>
+<h3>Wasserhärte in Deutschland, Österreich und der Schweiz</h3>
+<p>In Deutschland wird die Wasserhärte in Grad deutscher Härte (°dH) angegeben, und ab etwa 14 °dH gilt Wasser als hart – große Teile Bayerns, Baden-Württembergs und des westlichen Deutschlands liegen darüber, sodass ein Dampfkessel dort ohne regelmäßige Entkalkung zügig verkrustet. Auch in Österreich ist das Leitungswasser vielerorts kalkhaltig, während es in weiten Teilen der Schweiz deutlich weicher ausfällt. Ihren genauen Härtegrad nennt Ihnen der örtliche Wasserversorger; daraus leiten Sie das Entkalkungsintervall und, falls vorhanden, die Härteeinstellung der Maschine ab. Die offiziellen Entkalkungsanleitungen von Sage finden Sie im Support-Bereich von <a href="https://www.sageappliances.co.uk/">sageappliances.co.uk</a>.</p>
+<h2>Entkalken statt Zerlegen – und wo die Grenze liegt</h2>
+<p>Erst entkalken, dann zerlegen – aber kennen Sie die Grenze der Entkalkung:</p>
+<ul>
+<li><strong>Zuerst entkalken</strong> bei Füllstands-, Sonden- und Nachfüll-Codes (20, 21, 32), bei schwachem Dampf ohne Code und bei jeder Maschine, deren letzte Entkalkung mehr als drei Monate zurückliegt. Kosten: eine Flasche Entkalker.</li>
+<li><strong>Entkalkung hilft nicht</strong>, wenn ein Sensor-Code auf frisch entkalkter, warmer Maschine sofort zurückkommt – ob als Dampfkessel-Eintrag der Codes 1 bis 4 oder als <a href="https://de.codefixcoffee.com/breville/oracle-bes980/error-8/">Error 8</a> auf der Kaffee-Seite. Ein Code, der die Entkalkung übersteht, verweist auf den Sensor, sein Kabel oder einen Stecker.</li>
+<li><strong>Anhalten und Dichtungen prüfen</strong>, wenn Error 26 wiederkehrt: Ein undichter Dampfsonden-O-Ring lässt heißen Dampf an das Sensorkabel gelangen und ahmt einen durchgehenden Kessel nach. Neue Sonden-O-Ringe sind billig; eine Triac-Platine, die die Heizung nicht mehr abschaltet, ist es nicht.</li>
+<li><strong>Error 18</strong> an einer Maschine, die überhaupt keinen Dampf mehr erzeugt, liegt meist an der Heizseite – Thermosicherung, Heizelement oder Platine – und nicht am Kalk; führen Sie ihn als Reparatur, nicht als Reinigung.</li>
+</ul>
+<p>Für das Zerlegen halten Portale wie <a href="https://www.ifixit.com/">ifixit.com</a> Teardowns und Schritt-für-Schritt-Anleitungen für Espressomaschinen bereit.</p>
+<h2>Was die Teile kosten</h2>
+<p>Originale Temperatursensor-Baugruppen kosten je nach Sensor etwa 25 bis 95 €; Dampfstab-Baugruppen, die ihren Sensor einschließen, liegen bei rund 60 bis 95 €; ein Satz aus Sonde und O-Ringen bei etwa 85 € und eine Nachfüllpumpe bei 30 bis 60 €. Dem stehen Herstellerangebote für interne Fehler außerhalb der Garantie von üblicherweise 300 bis 500 € gegenüber – die bessere Rechnung lautet daher fast immer: zuerst die Entkalkerflasche, danach die Reparatur auf Sensor-Ebene.</p>
+</main>
+<footer>Reparaturanleitungen und Fehlercode-Erklärungen von codefixcoffee.com.</footer>
+</body></html>
