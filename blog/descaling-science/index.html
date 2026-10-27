@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Entkalkung, richtig erklärt</title>
+<meta name="description" content="Was Kalk mit Thermoblock und Ventilen macht, warum Essig manche Maschinen schädigt, Zitronen- vs. Milchsäure und Entkalkungsintervalle nach Wasserhärte.">
+<link rel="canonical" href="https://de.codefixcoffee.com/blog/descaling-science/">
+<link rel="alternate" hreflang="en" href="https://blog.codefixcoffee.com/post/descaling-science/" />
+  <link rel="alternate" hreflang="fr" href="https://fr.codefixcoffee.com/blog/descaling-science/" />
+  <link rel="alternate" hreflang="de" href="https://de.codefixcoffee.com/blog/descaling-science/" />
+  <link rel="alternate" hreflang="es" href="https://es.codefixcoffee.com/blog/descaling-science/" />
+  <link rel="alternate" hreflang="it" href="https://it.codefixcoffee.com/blog/descaling-science/" />
+  <link rel="alternate" hreflang="pl" href="https://pl.codefixcoffee.com/blog/descaling-science/" />
+  <link rel="alternate" hreflang="nl" href="https://nl.codefixcoffee.com/blog/descaling-science/" />
+  <link rel="alternate" hreflang="pt" href="https://pt.codefixcoffee.com/blog/descaling-science/" />
+  <link rel="alternate" hreflang="hu" href="https://hu.codefixcoffee.com/blog/descaling-science/" />
+  <link rel="alternate" hreflang="cs" href="https://cs.codefixcoffee.com/blog/descaling-science/" />
+  <link rel="alternate" hreflang="ro" href="https://ro.codefixcoffee.com/blog/descaling-science/" />
+  <link rel="alternate" hreflang="sv" href="https://sv.codefixcoffee.com/blog/descaling-science/" />
+  <link rel="alternate" hreflang="tr" href="https://tr.codefixcoffee.com/blog/descaling-science/" />
+<link rel="stylesheet" href="/blog/blog.css">
+<link rel="alternate" type="application/rss+xml" title="CodeFix Blog" href="/blog/rss.xml">
+<meta name="google-adsense-account" content="ca-pub-9660119725457689"><script>(function(){var u="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9660119725457689";var d=false;function l(){if(d)return;d=true;var s=document.createElement("script");s.async=true;s.crossOrigin="anonymous";s.src=u;document.head.appendChild(s)}["scroll","pointerdown","keydown","touchstart"].forEach(function(e){addEventListener(e,l,{once:true,passive:true})});addEventListener("load",function(){setTimeout(l,3500)})})();</script></head>
+<body>
+<header class="site"><div class="in"><a class="brand" href="/blog/">☕ CodeFix Blog</a><span><a href="/">Zurück zur Website</a></span></div></header>
+<main>
+<h1>Entkalkung, richtig erklärt</h1>
+<p class="meta">2026-10-27</p>
+<p>In fast jeder Fehlerliste einer Kaffeemaschine dominiert eine einzige Grundursache: Kalk. Hartes Wasser führt gelöstes Calcium und Magnesium mit sich; wird es erhitzt, fallen die Carbonate aus der Lösung aus und schlagen sich auf dem heißesten Metall des Geräts nieder. Mehr ist Kalk nicht — und er steckt hinter einem unverhältnismäßig großen Teil der Codes auf dieser Seite, von Heizungs- und Ventilfehlern über Priming-Probleme bis hin zu dauerhaft leuchtenden Entkalkungslampen. Die gute Nachricht: Keine andere Fehlerfamilie lässt sich so günstig beheben — mit einer Flasche Entkalker für €10.</p>
+<h2>Was Kalk mit einem Thermoblock macht</h2>
+<p>Ein Thermoblock ist eine kompakte Metallmasse mit engem Kanal, in dem das Wasser auf dem Weg zur Tasse erhitzt wird. Kalk setzt sich auf diesen Kanalwänden ab, und Calciumcarbonat isoliert thermisch erstaunlich gut — genau darin liegt das Problem.</p>
+<ul>
+<li><strong>Das Aufheizen verlangsamt sich.</strong> Das Heizelement braucht länger bis zur Solltemperatur; starke Beläge bremsen manche Maschinen so weit, dass die eigenen Temperaturprüfungen der Steuerplatine auslösen — auf der <a href="https://www.jura.com/de">offiziellen Jura-Website</a> ist die Thermoblock-Fehlerfamilie ausdrücklich mit Kalk verknüpft.</li>
+<li><strong>Der NTC-Sensor lügt.</strong> Eine Kalkschicht verändert, wie schnell der NTC-Sensor im Block die Hitze sieht; die Steuerplatine glaubt dann an eine Überhitzung oder ein Heizversagen, obwohl beides nicht stimmt.</li>
+<li><strong>Der Block läuft heiß.</strong> Thermisch isoliertes Metall liegt über seiner Auslegungstemperatur und strapaziert die thermischen Sicherungen, die ihn eigentlich schützen. Ein durchgekalkter Thermoblock ist ein Austauschteil, kein Reinigungsfall — €90 bis €180 bei einer Jura, für Kalk, den eine Flasche Entkalker entfernt hätte.</li>
+</ul>
+<h2>Was Kalk mit Ventilen und engen Öffnungen macht</h2>
+<p>Die zweite Schadenszone ist alles, was eng ist. Bei Jura-Maschinen mit motorgetriebenem Keramik-Ventil versteift Kalk die Scheibe, bis sie die von der Steuerplatine befohlene Position nicht mehr erreicht — genau das meldet <a href="https://de.codefixcoffee.com/jura/automatic-machines/error-6/">Fehler 6</a>, weshalb die vollständige Entkalkung der erste und kostenlose Schritt seiner Behebung ist. Enge Wasserzuführungen verstopfen auf dieselbe Weise: <a href="https://de.codefixcoffee.com/philips-saeco/espresso-machines/error-05/">Philips Fehler 05</a> kann nach dem Priming bestehen bleiben, weil eine verkalkte Öffnung der Pumpe schlicht kein Wasser lässt. Auch Füllstandssensoren sind betroffen — Kalk auf einem Schwimmer im Tank ist ein klassischer Auslöser der Meldung "Wassertank füllen" bei eigentlich vollem Tank. Und ein verkalkter Durchflusssensor zählt nicht mehr mit, womit die <a href="https://de.codefixcoffee.com/delonghi/magnifica-dinamica/descale-light-stays-on-after-descaling/">De'Longhi-Entkalkungslampe nach der Entkalkung weiterleuchtet</a>: Die Maschine hat den durchgeführten Zyklus nie registriert.</p>
+<h2>Warum Essig für manche Maschinen falsch ist</h2>
+<p>Haushaltsessig ist Essigsäure — für Espressomaschinen dreifach ungeeignet. Er ist schwach und braucht lange Einwirkzeiten, um kompakten Kalk in engen Kanälen zu lösen. Er greift verchromte Messingverschraubungen an und lässt manche Gummidichtungen aufquellen. Und sein Geruch übersteht in Kunststoffschläuchen so manchen Spülgang. Nespresso stellt es auf der <a href="https://www.nespresso.com/">offiziellen Nespresso-Website</a> unmissverständlich klar: nicht mit Essig entkalken — der Wasserkreislauf nimmt Schaden, und Hilfe gibt es dann nicht mehr. Merken sollten Sie sich das, wenn ein <a href="https://de.codefixcoffee.com/nespresso/vertuo-machines/blinking-lights/">orange blinkendes Muster einer Vertuo</a> Sie in die Entkalkungsroutine schickt. Für den Wasserkocher gilt: Essig ist in Ordnung. Für eine Maschine mit Pumpe, Ventil und Garantie gilt: Nehmen Sie einen echten Entkalker.</p>
+<h2>Zitronensäure gegen Milchsäure</h2>
+<p>Fast jeder handelsübliche Entkalker basiert auf einer von zwei lebensmittelechten Säuren:</p>
+<ul>
+<li><strong>Zitronensäure</strong> — als Pulver erhältlich, €3 bis €6 für einen Jahr Haushalt, stark und schnell bei hartem Belag. Sie bildet die Basis der meisten Universal-Entkalker und hinterlässt bei gründlichem Spülen nichts.</li>
+<li><strong>Milchsäure</strong> — milder und fast geruchlos, in den Markenflaschen enthalten, mit denen Maschinen ausgeliefert werden. Schonender zu Dichtungen und Beschichtungen, braucht dafür etwas längere Einwirkzeit für denselben Belag.</li>
+</ul>
+<p>Beide Säuren funktionieren, wenn sie durch das hauseigene Entkalkungsprogramm der Maschine laufen. Entscheidend ist, es zu Ende zu führen: Erinnerungszähler registrieren nur einen vollständigen Zyklus aus dem Entkalkungsmenü — mit aufgesetztem Auslauf und inklusive Spülphase. Bricht man ab oder improvisiert mit einem Krug, <a href="https://de.codefixcoffee.com/delonghi/magnifica-dinamica/descale-light-stays-on-after-descaling/">bleibt die Lampe an</a>.</p>
+<h2>Wie oft: das entscheidet Ihr Wasser</h2>
+<p>Maschinenerinnerungen zählen Volumen — gebrühte Tassen, gepumpte Liter — nicht die Wasserhärte. Wer hartes Wasser hat, muss entkalken, bevor die Lampe überhaupt erscheint. Eine praktische Faustregel:</p>
+<ul>
+<li><strong>Weiches Wasser</strong> (unter etwa 7 °dH beziehungsweise 125 ppm): Die eingebaute Erinnerung genügt, in der Praxis alle 3 bis 6 Monate.</li>
+<li><strong>Mittelhart</strong> (7 bis 14 °dH): alle 2 bis 3 Monate.</li>
+<li><strong>Hart</strong> (über 14 °dH): etwa monatlich, und früher noch, wenn der Durchfluss langsam wird oder die Pumpe lauter wird.</li>
+</ul>
+<p>Eine Packung Härte-Teststreifen kostet €5 bis €10, und Ihr Wasserversorger veröffentlicht den Wert für Ihre Region. Die Spätzeichen sind über alle Marken hinweg gleich: dünner, träger Durchfluss, lautere Pumpe, kühlerer Kaffee — und irgendwann die Codes von oben. Wer nach Plan entkalkt, dem passieren die meisten dieser Codes nie; eine €10-Flasche ist die günstigste Reparatur, die diese Seite jemals empfehlen wird.</p>
+<h3>Wasserhärte in Deutschland, Österreich und der Schweiz</h3>
+<p>In allen drei Ländern veröffentlichen die örtlichen Wasserwerke ihre Härtewerte — in Deutschland und Österreich in Grad deutscher Härte (°dH), in der Schweiz teils in französischen Härtegraden (°fH, wobei 1 °dH etwa 1,78 °fH entspricht). Sehr hartes Wasser gibt es zum Beispiel rund um München, im Raum Karlsruhe oder im Genferseegebiet — wer dort wohnt, entkalkt besser früher als die Maschinenerinnerung verlangt. Filterkartuschen verlangsamen die Verkalkung, ersetzen die Entkalkung je nach Modell aber nicht vollständig; ein Blick in die Betriebsanleitung Ihres Herstellers schafft hier Klarheit.</p>
+</main>
+<footer>Reparaturanleitungen und Fehlercode-Erklärungen von codefixcoffee.com.</footer>
+</body></html>
